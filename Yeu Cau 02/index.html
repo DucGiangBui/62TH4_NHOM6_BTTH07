@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <form>
+        <h1>Registration Form</h1>
+        <div class="row">
+            <div class="col">User ID:</div>
+            <div class="col inp">
+                <input type="text" name="txtUserID" id="txtUserID">
+                <span id="statusOfUserID" class="sp"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Password:</div>
+            <div class="col inp">
+                <input type="password" name="txtPW" id="txtPW">
+                <span id="statusOfPass" class="sp"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Name:</div>
+            <div class="col inp">
+                <input type="text" name="txtName" id="txtName">
+                <span id="statusOfName" class="sp"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ">Addess:</div>
+            <div class="col inp">
+                <input type="text" id="txtAdd">
+                <span id="statusOfAdd" class="sp"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ">Country:</div>
+            <div class="col inp">
+                <select name="country" class="form-control" id="country">
+                    <option value="0" label="Select a country ... " selected="selected">Select a country ... </option>
+                    <option value="VN" label="Viet Nam">Vietnamese</option>
+                    <option value="DZ" label="Algeria">Algeria</option>
+                    <option value="AO" label="Angola">Angola</option>
+                    <option value="BJ" label="Benin">Benin</option>
+                    <option value="BW" label="Botswana">Botswana</option>
+                    <option value="BF" label="Burkina Faso">Burkina Faso</option>
+                    <option value="BI" label="Burundi">Burundi</option>
+                    <option value="CM" label="Cameroon">Cameroon</option>
+                    <option value="CV" label="Cape Verde">Cape Verde</option>
+                    <option value="CF" label="Central African Republic">Central African Republic</option>
+                    <option value="TD" label="Chad">Chad</option>
+                    <option value="KM" label="Comoros">Comoros</option>
+                    <option value="CG" label="Congo - Brazzaville">Congo - Brazzaville</option>
+                    <option value="CD" label="Congo - Kinshasa">Congo - Kinshasa</option>
+                    <option value="CI" label="Côte d’Ivoire">Côte d’Ivoire</option>
+                    <option value="DJ" label="Djibouti">Djibouti</option>
+                    <option value="EG" label="Egypt">Egypt</option>
+                    <option value="GQ" label="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="ER" label="Eritrea">Eritrea</option>
+                    <option value="ET" label="Ethiopia">Ethiopia</option>
+                    <option value="GA" label="Gabon">Gabon</option>
+                    <option value="GM" label="Gambia">Gambia</option>
+                    <option value="GH" label="Ghana">Ghana</option>
+                    <option value="GN" label="Guinea">Guinea</option>
+                    <option value="GW" label="Guinea-Bissau">Guinea-Bissau</option>
+                    <option value="KE" label="Kenya">Kenya</option>
+                    <option value="LS" label="Lesotho">Lesotho</option>
+                    <option value="LR" label="Liberia">Liberia</option>
+                    <option value="LY" label="Libya">Libya</option>
+                    <option value="MG" label="Madagascar">Madagascar</option>
+                    <option value="MW" label="Malawi">Malawi</option>
+                    <option value="ML" label="Mali">Mali</option>
+                    <option value="MR" label="Mauritania">Mauritania</option>
+                    <option value="MU" label="Mauritius">Mauritius</option>
+                    <option value="YT" label="Mayotte">Mayotte</option>
+                    <option value="MA" label="Morocco">Morocco</option>
+                    <option value="MZ" label="Mozambique">Mozambique</option>
+                    <option value="NA" label="Namibia">Namibia</option>
+                    <option value="NE" label="Niger">Niger</option>
+                    <option value="NG" label="Nigeria">Nigeria</option>
+                    <option value="RW" label="Rwanda">Rwanda</option>
+                    <option value="RE" label="Réunion">Réunion</option>
+                    <option value="SH" label="Saint Helena">Saint Helena</option>
+                    <option value="SN" label="Senegal">Senegal</option>
+                    <option value="SC" label="Seychelles">Seychelles</option>
+                    <option value="SL" label="Sierra Leone">Sierra Leone</option>
+                    <option value="SO" label="Somalia">Somalia</option>
+                    <option value="ZA" label="South Africa">South Africa</option>
+                    <option value="SD" label="Sudan">Sudan</option>
+                    <option value="SZ" label="Swaziland">Swaziland</option>
+                    <option value="ST" label="São Tomé and Príncipe">São Tomé and Príncipe</option>
+                    <option value="TZ" label="Tanzania">Tanzania</option>
+                    <option value="TG" label="Togo">Togo</option>
+                    <option value="TN" label="Tunisia">Tunisia</option>
+                    <option value="UG" label="Uganda">Uganda</option>
+                    <option value="EH" label="Western Sahara">Western Sahara</option>
+                    <option value="ZM" label="Zambia">Zambia</option>
+                </select>
+                <span id="statusOfCountry" class="sp"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ">ZIP Code:</div>
+            <div class="col inp">
+                <input type="text" name="txtZip" id="txtZip">
+                <span id="statusOfZip" class="sp"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ">Email:</div>
+            <div class="col inp">
+                <input type="text" name="txtEmail" id="txtEmail">
+                <span id="statusOfEmail" class="sp"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col gen">Gender:</div>
+            <div class="col inp1">
+                <form action="action">
+
+                    <div class="selection">
+                        <input type="radio" id="gender" name="gender" value="male">
+                        <label for="s1">Male</label><br>
+                    </div>
+
+                    <div class="selection">
+                        <input type="radio" id="gender" name="gender" value="female">
+                        <label for="s2">Female</label><br>
+                    </div>
+                </form>
+                <span id="statusOfGender" class="sp"></span>
+            </div>
+        </div>
+        <div class="row lan">
+            <div class="col ">Language:</div>
+            <div class="col inp1">
+                <form action="action">
+                    <div class="selection">
+                        <input type="checkbox" id="language" name="language" value="1">
+                        <label for="language1">English</label><br>
+                    </div>
+                    <div class="selection">
+                        <input type="checkbox" id="language" name="language" value="2">
+                        <label for="language2">Non English</label><br>
+                    </div>
+                </form>
+                <span id="statusOfLanguage" class="sp"></span>
+            </div>
+        </div>
+        <div class="row about">
+            <div class="col ">About:</div>
+            <div class="col inp">
+                <input type="text" name="txtAbout" id="txtAbout">
+                <span id="statusOfAbout" class="sp"></span>
+            </div>
+        </div>
+        <div class="row btn">
+            <div class="col"></div>
+            <div class="col">
+                <input type="submit" id="btnRegister">
+            </div>
+        </div>
+    </form>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

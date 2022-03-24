@@ -36,8 +36,7 @@ function checkUserID() {
   let userIDRegex = /^[a-zA-z0-9]{5,12}$/;
   if (userIDRegex.test(userID.value)) {
     return true;
-  } 
-  else {
+  } else {
     return false;
   }
 }
@@ -47,30 +46,29 @@ function checkPW() {
   let pwRegex = /^[a-zA-z0-9]{7,12}$/;
   if (pwRegex.test(pw.value)) {
     return true;
-  } 
-  else {
+  } else {
     return false;
   }
 }
 
 function checkName() {
   let Name = document.getElementById("txtName");
-  let NameRegex = /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$/;
+  let NameRegex =
+    /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$/;
   if (NameRegex.test(Name.value)) {
     return true;
-  } 
-  else {
+  } else {
     return false;
   }
 }
 
 function checkAdd() {
   let add = document.getElementById("txtAdd");
-  let addRegex = /^[a-z0-9A-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$/;
+  let addRegex =
+    /^[a-z0-9A-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$/;
   if (addRegex.test(add.value)) {
     return true;
-  } 
-  else {
+  } else {
     return false;
   }
 }
@@ -79,8 +77,7 @@ function checkCountry() {
   let country = document.getElementById("country");
   if (country.value != "0") {
     return true;
-  } 
-  else {
+  } else {
     return false;
   }
 }
@@ -90,8 +87,7 @@ function checkZipcode() {
   let zipRegex = /^[0-9]{5,7}$/;
   if (zipRegex.test(zip.value)) {
     return true;
-  } 
-  else {
+  } else {
     return false;
   }
 }
@@ -101,28 +97,27 @@ function checkEmail() {
   let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   if (emailRegex.test(email.value)) {
     return true;
-  } 
-  else {
+  } else {
     return false;
   }
 }
 
 function checkGender() {
-  let gender = document.getElementById("gender");
-  if (gender.value == null) {
+  var genders = document.getElementsByName("gender");
+  if (genders[0].checked == true) {
     return true;
-  } 
-  else {
+  } else if (genders[1].checked == true) {
+    return true;
+  } else {
     return false;
   }
 }
 
 function checkLanguage() {
   let language = document.getElementById("language");
-  if (language.checked==yes) {
+  if (language.checked) {
     return true;
-  } 
-  else {
+  } else {
     return false;
   }
 }
@@ -135,7 +130,7 @@ register.addEventListener("click", function (e) {
   let statusOfUserID = document.getElementById("statusOfUserID");
   let statusOfPass = document.getElementById("statusOfPass");
   let statusOfName = document.getElementById("statusOfName");
-  let statusOfAdd = document.getElementById("statusOfAdd")
+  let statusOfAdd = document.getElementById("statusOfAdd");
   let statusOfCountry = document.getElementById("statusOfCountry");
   let statusOfZip = document.getElementById("statusOfZip");
   let statusOfEmail = document.getElementById("statusOfEmail");
