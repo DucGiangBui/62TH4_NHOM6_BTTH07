@@ -1,0 +1,25 @@
+.form-main{
+    width: 500px;
+    height: max-content;
+    background-color: rgba(72, 167, 96, 0.49);
+    padding: 50px;
+}
+.row{
+    display:flex;
+    padding: 10px;
+}
+.inp{
+    position: absolute;
+    left: 150px;
+}
+.sp{
+    position: absolute;
+    left: 200px;
+    width: max-content;
+}
+.form-horizontal{
+    display: flex;
+}
+.selection{
+    margin-right: 20px;
+}
