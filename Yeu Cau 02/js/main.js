@@ -35,13 +35,13 @@ $(document).ready(function(){
             }
             return false
         }
-        // function checkCountry() {
-        //     let country = d$("#country").val();
-        //     if (country!= "0") {
-        //         return true;
-        //     } 
-        //     return false;
-        // }
+        function checkCountry() {
+            var country = $('#country');
+            if (country.val() === '') {
+                return false;
+            }
+                return true;
+            }
 
         function checkZipCode(){
             let zipCode = $("#txtZip").val();
@@ -60,26 +60,24 @@ $(document).ready(function(){
             }
             return false;
         }
-
-        function checkEmail(){
-            let email = $("#txtEmail").val();
-            let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,6}$/;
-            if (emailRegex.test(email)){
+        
+        function checkGender() {
+            var result = $('input[type="radio"]:checked');
+            if (result.length>0) {
                 return true;
-            }
-            return false;
+            }else {
+                return false;
+          }
         }
-
-        function checkEmail(){
-            let email = $("#txtEmail").val();
-            let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,6}$/;
-            if (emailRegex.test(email)){
+        
+        function checkLanguage() {
+            var result = $('input[type="checkbox"]:checked');
+            if (result.length>0) {
                 return true;
-            }
-            return false;
+            }else {
+                return false;
+          }
         }
-    
-    
         $("#btnRegister").click(function(e){
             e.preventDefault();
             if(checkUserID()){
@@ -114,14 +112,14 @@ $(document).ready(function(){
                 $("#statusOfAdd").text('Address không hợp lệ !')
                 $("#statusOfAdd").css('color','red')
             }
-            // if(checkCountry()){
-            //     $("#statusOfCountry").text('Country hợp lệ !')
-            //     $("#statusOfCountry").css('color','blue')
-            // }
-            // else{
-            //     $("#statusOfCountry").text('Country không hợp lệ !')
-            //     $("#statusOfCountry").css('color','red')
-            // }
+            if(checkCountry()){
+                $("#statusOfCountry").text('Country hợp lệ !')
+                $("#statusOfCountry").css('color','blue')
+            }
+            else{
+                $("#statusOfCountry").text('Country không hợp lệ !')
+                $("#statusOfCountry").css('color','red')
+            }
 
             if(checkZipCode()){
                 $("#statusOfZip").text('Zip Code hợp lệ !')
@@ -139,6 +137,22 @@ $(document).ready(function(){
             else{
                 $("#statusOfEmail").text('Email không hợp lệ !')
                 $("#statusOfEmail").css('color','red')
+            }
+
+            if (checkGender()) {
+                $("#statusOfGender").text("OK !");
+                $("#statusOfGender").css("color", "green");
+            } else {
+                $("#statusOfGender").text("Vui lòng chọn !");
+                $("#statusOfGender").css("color", "red");
+            }
+
+            if (checkLanguage()) {
+                $("#statusOfLanguage").text("OK !");
+                $("#statusOfLanguage").css("color", "green");
+            } else {
+                $("#statusOfLanguage").text("Vui lòng chọn !");
+                $("#statusOfLanguage").css("color", "red");
             }
         })
     })
